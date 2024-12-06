@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Generation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Video Generator</h1>
+
+    <!-- Campo para a API Key -->
+    <form id="api-key-form">
+      <label for="api-key">API Key:</label>
+      <input 
+        type="text" 
+        id="api-key" 
+        name="api-key" 
+        placeholder="Enter API key here" 
+        required>
+      <button type="submit">Set API Key</button>
+    </form>
+
+    <!-- Formulário principal -->
+    <form id="video-form">
+      <label for="prompt">Enter Video Prompt:</label>
+      <textarea id="prompt" name="prompt" rows="4" placeholder="Describe your video..." required></textarea>
+
+      <label for="style">Select Video Style:</label>
+      <select id="style" name="style">
+        <option value="cinematic">Cinematic</option>
+        <option value="cartoon">Cartoon</option>
+        <option value="realistic">Realistic</option>
+      </select>
+
+      <button type="submit">Generate Video</button>
+    </form>
+
+    <div id="result">
+      <h2>Generated Video</h2>
+      <video id="video-output" controls>
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
